@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Регистрация на сайте</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
 </head>
 <body>
-    
+    <header> 
+        <div class="head-container">
+            <a href="index.html">Главная</a>
+            <h2><b>Регистрация</b></h2>
+            <span></span> </div>
+    </header>
+
+    <main class="container">
+        <div class="registration-card">
+            <h2 class="purple-text" style="text-align: center;">Создать аккаунт</h2>
+            <form class="reg-form">
+                <div class="form-group">
+                    <label for="username">Имя пользователя</label>
+                    <input type="text" id="username" name="username" placeholder="Ваш юзернейм" required>
+                    <label for="email">Электронная почта</label>
+                    <input type="email" id="email" name="email" placeholder="ваша_почта@mail.com" required>
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="reg-button">Зарегистрироваться</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="socials">
+            <a href="https://vk.com/lifarxenia" target="_blank">VK</a>
+            <a href="https://t.me/eni0_6" target="_blank">Telegram (Канал)</a>
+        </div>
+        <p>&copy; 2026 Ксения Лифарь</p>
+    </footer>
+</body>
+</html>
 </body>
 </html>

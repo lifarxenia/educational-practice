@@ -6,7 +6,6 @@
     border-radius: 10%;    
     border: 10px solid #a200ff; 
 }
-
 .head-container {
     display: flex;
     align-items: center;
@@ -15,7 +14,7 @@
     padding: 20px;
     background-color: #5e0094;
     color: white;
-    position: relative; /* Добавляем */
+    position: relative;
 }
 h2, h5 {
   color:#5e0094;
@@ -31,14 +30,13 @@ h2, h5 {
 .head-container a {
   color: #f6dbfb;
 }
-
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
   gap: 20px;
   padding: 40px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .container p {
   text-align: justify;
@@ -46,22 +44,24 @@ h2, h5 {
   word-break: break-word;
   text-align-last: justify;
 }
-
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
 .gallery-images img {
     flex: 0 0 auto;
-    width: 30%;        /* Фиксированная ширина */
-    height: auto;        /* Сохранение пропорций */
+    width: 30%;
+    height: auto;
     max-width: 100%;
 }
-
 .gallery-images {
-    display: flex;       /* Включает гибкую верстку */
-    flex-wrap: wrap;     /* Позволяет изображениям переноситься на новую строку, если не хватает места */
-    gap: 20px;           /* Задает отступы между изображениями (вместо сложных вычислений в width) */
-    width: 100%;         /* Убедитесь, что контейнер занимает нужную ширину */
+    display: flex;       
+    flex-wrap: wrap;     
+    gap: 20px;
+    width: 100%;
     justify-content: center;
 }
-
 .text-block {
   flex: 1;
   max-width: 600px;
@@ -70,7 +70,6 @@ h2, h5 {
   padding: 40px;
   background-color: white;
 }
-
 .about-me, .art-information {
   width: 100%;
   max-width: 100%;
@@ -81,7 +80,6 @@ h2, h5 {
   background-color: white;
   box-sizing: border-box;
 }
-
 body {
   background-color: rgb(238, 227, 240);
   margin: 0; 
@@ -97,15 +95,14 @@ body {
   background-color: #5e0094;
   color: white;
   margin-top: auto;
-  justify-content: space-between; /* Распределяет элементы по краям */
+  justify-content: space-between; 
   align-items: center; 
-  width: 100%;                    /* Убедитесь, что футер занимает всю ширину */
+  width: 100%;
   box-sizing: border-box;  
 }
 .socials {
-    display: flex;                  /* Чтобы ссылки внутри тоже были в ряд */
+    display: flex;
     gap: 20px;
-
 }
 .footer a {
   color: #f6dbfb;
@@ -115,62 +112,118 @@ body {
   font-size: 16px;
   white-space: nowrap;  
 }
-
 .left-column p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
+.left-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px; 
+}
 .purple-text {
   color: rgb(94, 0, 148);
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
+@media (max-width: 768px) {
+    .head-container h2 {
+        position: static;
+        transform: none;
+        order: -1;
+    }
+    .head-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .container {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .i-img {
+        max-width: 100%;
+    }
+    .text-block, .about-me, .art-information {
+        padding: 20px;
+    }
+}
+.registration-card {
+    flex: 1;
+    max-width: 450px;
+    background-color: white;
+    border: 10px solid #a200ff;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px auto;
+}
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-group label {
+    color: #5e0094;
+    font-weight: 500;
+}
+.form-group input {
+    padding: 12px;
+    border: 2px solid #f6dbfb;
+    border-radius: 10px;
+    outline: none;
+}
+.reg-button {
+    background-color: #a200ff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
 .ubuntu-regular {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .ubuntu-medium {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-
 .ubuntu-bold {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .ubuntu-light-italic {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
-
 .ubuntu-regular-italic {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
-
 .ubuntu-medium-italic {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
-
 .ubuntu-bold-italic {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
