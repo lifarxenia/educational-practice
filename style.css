@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  gap: 50px;
+  gap: 20px;
   padding: 40px;
   flex-wrap: wrap;
 }
@@ -43,7 +43,31 @@
   word-break: break-word;
   text-align-last: justify;
 }
+.intro-image img {
+    flex: 1 1 45%; /* Почти половина ширины */
+    max-width: calc(50% - 20px);
+    min-width: 300px;
+}
+.gallery-images img {
+    flex: 1 1 30%; /* Треть ширины */
+    max-width: calc(33.333% - 20px);
+    min-width: 250px;
+}
+@media (max-width: 968px) {
+    .intro-image img,
+    .gallery-images img {
+        flex: 1 1 45%;
+        max-width: calc(50% - 20px);
+    }
+}
 
+@media (max-width: 600px) {
+    .intro-image img,
+    .gallery-images img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 .text-block {
   flex: 1;
   max-width: 600px;
