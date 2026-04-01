@@ -17,12 +17,15 @@
     color: white;
     position: relative; /* Добавляем */
 }
-
+h2, h5 {
+  color:#5e0094;
+}
 .head-container h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%); 
     margin: 0; 
+    color: white;
 }
 
 .head-container a {
@@ -43,31 +46,22 @@
   word-break: break-word;
   text-align-last: justify;
 }
-.intro-image img {
-    flex: 1 1 45%; /* Почти половина ширины */
-    max-width: calc(50% - 20px);
-    min-width: 300px;
-}
+
 .gallery-images img {
-    flex: 1 1 30%; /* Треть ширины */
-    max-width: calc(33.333% - 20px);
-    min-width: 250px;
-}
-@media (max-width: 968px) {
-    .intro-image img,
-    .gallery-images img {
-        flex: 1 1 45%;
-        max-width: calc(50% - 20px);
-    }
+    flex: 0 0 auto;
+    width: 30%;        /* Фиксированная ширина */
+    height: auto;        /* Сохранение пропорций */
+    max-width: 100%;
 }
 
-@media (max-width: 600px) {
-    .intro-image img,
-    .gallery-images img {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.gallery-images {
+    display: flex;       /* Включает гибкую верстку */
+    flex-wrap: wrap;     /* Позволяет изображениям переноситься на новую строку, если не хватает места */
+    gap: 20px;           /* Задает отступы между изображениями (вместо сложных вычислений в width) */
+    width: 100%;         /* Убедитесь, что контейнер занимает нужную ширину */
+    justify-content: center;
 }
+
 .text-block {
   flex: 1;
   max-width: 600px;
@@ -77,7 +71,7 @@
   background-color: white;
 }
 
-.about-me {
+.about-me, .art-information {
   width: 100%;
   max-width: 100%;
   border: 10px solid #a200ff;
@@ -98,16 +92,28 @@ body {
   gap: 0;
 }
 .footer {
-  text-align: center;
+  display: flex;
   padding: 30px;
   background-color: #5e0094;
   color: white;
   margin-top: auto;
+  justify-content: space-between; /* Распределяет элементы по краям */
+  align-items: center; 
+  width: 100%;                    /* Убедитесь, что футер занимает всю ширину */
+  box-sizing: border-box;  
 }
+.socials {
+    display: flex;                  /* Чтобы ссылки внутри тоже были в ряд */
+    gap: 20px;
 
+}
+.footer a {
+  color: #f6dbfb;
+}
 .footer p {
   margin: 0;
   font-size: 16px;
+  white-space: nowrap;  
 }
 
 .left-column p {
