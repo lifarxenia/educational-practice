@@ -128,6 +128,9 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
 }
+a {
+  color:#5e0094;
+}
 @media (max-width: 768px) {
     .head-container h2 {
         position: static;
