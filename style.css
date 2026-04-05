@@ -181,6 +181,18 @@ body {
 a {
   color:#5e0094;
 }
+.art-information a, .about-me a {
+  color: #a200ff;
+}
+.art-information a:visited, .about-me a:visited {
+  color: #ff0088;
+}
+.art-information a:hover, .about-me a:hover {
+  color: #960000;
+}
+ul {
+  list-style-type: square;
+}
 @media (max-width: 768px) {
     .head-container h2 {
         position: static;
